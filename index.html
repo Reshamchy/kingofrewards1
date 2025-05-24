@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>King of Rewards - App Promotion</title>
+    <meta name="description" content="King of Rewards - Earn money by watching videos on TikTok, YouTube, Instagram, playing games, completing tasks. Redeem via PayPal, eSewa, Khalti, FreeFire diamonds & more.">
+    <meta name="keywords" content="earn money online, rewards app, watch videos earn money, tiktok rewards, youtube rewards, freefire diamonds, esewa, khalti, paypal, nepal rewards app, online earning, gaming rewards">
+    <meta name="author" content="Resham Chaudhary">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="King of Rewards - Ultimate Earning App">
+    <meta property="og:description" content="Earn money by watching videos, playing games, completing tasks. Multiple redemption options available.">
+    <meta property="og:image" content="/api/placeholder/1200/630">
+    <meta property="og:url" content="https://kingofrewards.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="King of Rewards - Ultimate Earning App">
+    <meta name="twitter:description" content="Earn money by watching videos, playing games, completing tasks. Multiple redemption options available.">
+    <meta name="twitter:image" content="/api/placeholder/1200/630">
+    
+    <title>King of Rewards - Earn Money Online | Watch Videos & Play Games for Rewards</title>
+    
     <style>
         * {
             margin: 0;
@@ -16,20 +37,28 @@
             background: linear-gradient(135deg, #1a237e, #4a148c);
             color: #fff;
             min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
         }
         
         header {
             background-color: rgba(0, 0, 0, 0.3);
-            padding: 1rem;
+            padding: 1rem 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
         }
         
         .logo {
@@ -37,15 +66,19 @@
             font-weight: bold;
             color: #ffd700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            margin-right: 10px;
+            border-radius: 8px;
         }
         
         .nav-links {
             display: flex;
             list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 2rem;
+            gap: 2rem;
         }
         
         .nav-links a {
@@ -59,15 +92,56 @@
             color: #ffd700;
         }
         
-        .hero {
+        .auth-buttons {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
             text-align: center;
-            padding: 4rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
+        }
+        
+        .btn-login {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #ffd700;
+        }
+        
+        .btn-signup {
+            background: #ffd700;
+            color: #4a148c;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: #ffd700;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
         }
         
         .hero h1 {
@@ -81,46 +155,57 @@
             font-size: 1.2rem;
             margin-bottom: 2rem;
             max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        .app-showcase {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
+        .cta-button {
+            background-color: #ffd700;
+            color: #4a148c;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: #ffd700;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
         
-        .app-img {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            width: 300px;
-            height: 600px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .app-img img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-        }
-        
-        .app-features {
-            flex: 1;
-            min-width: 300px;
-            max-width: 500px;
-        }
-        
         .feature {
             display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
+            align-items: flex-start;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
         }
         
         .feature-icon {
@@ -135,6 +220,218 @@
             font-size: 1.5rem;
             margin-right: 1rem;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            flex-shrink: 0;
+        }
+        
+        .app-showcase {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .app-img {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .redemption-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .redemption-card {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .redemption-card h3 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+        
+        .redemption-card ul {
+            list-style: none;
+            text-align: left;
+        }
+        
+        .redemption-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+        }
+        
+        .how-it-works {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+        }
+        
+        .step-number {
+            background: #ffd700;
+            color: #4a148c;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .testimonial {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .testimonial img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        
+        .stars {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-item {
+            background: rgba(255, 255, 255, 0.1);
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+        
+        .faq-answer {
+            padding: 0 1rem 1rem;
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .news-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .news-content {
+            padding: 1.5rem;
+        }
+        
+        .news-date {
+            color: #ffd700;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 150px;
+        }
+        
+        .contact-section {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: #ffd700;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #4a148c;
+            font-weight: bold;
         }
         
         .customer-support-badge {
@@ -158,69 +455,28 @@
             transform: translateY(-5px);
         }
         
-        .feature-text h3 {
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .download-section {
-            background-color: rgba(0, 0, 0, 0.3);
-            padding: 4rem 1rem;
-            text-align: center;
-            margin-top: 3rem;
-        }
-        
-        .download-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .download-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #ffd700;
-        }
-        
-        .qr-code {
-            background-color: white;
-            width: 200px;
-            height: 200px;
-            margin: 0 auto;
-            margin-bottom: 2rem;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .cta-button {
-            background-color: #ffd700;
-            color: #4a148c;
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
-        }
-        
         footer {
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 2rem 1rem;
+            padding: 2rem 0;
             text-align: center;
         }
         
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #ffd700;
         }
         
         .social-links {
@@ -241,6 +497,7 @@
             color: #fff;
             font-size: 1.2rem;
             transition: background-color 0.3s;
+            text-decoration: none;
         }
         
         .social-icon:hover {
@@ -253,9 +510,48 @@
             font-style: italic;
             opacity: 0.8;
         }
+
+        .download-section {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            background: #000;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
         
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: flex;
+            }
+            
+            .auth-buttons {
                 display: none;
             }
             
@@ -263,13 +559,63 @@
                 font-size: 2.5rem;
             }
             
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
             .app-showcase {
                 flex-direction: column;
             }
             
             .app-img {
-                width: 250px;
-                height: 500px;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .features-grid,
+            .steps-grid,
+            .testimonials-grid,
+            .news-grid,
+            .redemption-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+            
+            .hero {
+                padding: 2rem 0;
+            }
+            
+            .section {
+                padding: 2rem 0;
+            }
+            
+            .feature {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .feature-icon {
+                margin-right: 0;
+                margin-bottom: 1rem;
             }
         }
     </style>
@@ -277,256 +623,577 @@
 <body>
     <!-- Header Section -->
     <header>
-        <nav>
-            <div class="logo" style="display: flex; align-items: center;">
-    <span>King of Rewards</span>
-</div>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="/api/placeholder/40/40" alt="King of Rewards Logo" width="40" height="40">
+                    King of Rewards
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="auth-buttons">
+                <a href="#login" class="btn btn-login">Login</a>
+                <a href="#login" class="btn btn-signup">Sign Up</a>
 
-            <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#download">Download</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+                </div>
+                <div class="mobile-menu" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
     </header>
     
     <!-- Hero Section -->
     <section class="hero">
-        <h1>King of Rewards</h1>
-        <p>The ultimate rewards app that turns your everyday activities into amazing prizes and cashbacks. Start earning rewards today!</p>
-        <button class="cta-button">Download Now</button>
-        
-        <!-- App Showcase -->
-        <div class="app-showcase">
-            <div class="app-img">
-                <img src="images/app.jpg" alt="King of Rewards App Screenshot">
-                <div style="margin-top: 1rem; background: rgba(255,215,0,0.2); border-radius: 10px; padding: 0.5rem; text-align: center;">
-                    <h4 style="color: #ffd700;">Coming Soon</h4>
-                    <p style="font-size: 0.9rem;">Version 2.0 with even more earning options!</p>
-                </div>
-            </div>
+        <div class="container">
+            <h1>King of Rewards</h1>
+            <p>The ultimate rewards app that turns your everyday activities into amazing prizes and cashbacks. Start earning rewards today!</p>
+            <button class="cta-button" onclick="scrollToDownload()">Download Now</button>
             
-            <div class="app-features" id="features">
-                <h2 style="color: #ffd700; margin-bottom: 2rem; text-align: center;">Multiple Ways to Earn</h2>
-                
-                <div class="feature">
-                    <div class="feature-icon">📱</div>
-                    <div class="feature-text">
-                        <h3>Social Media Rewards</h3>
-                        <p>Earn by watching videos on TikTok, YouTube, Instagram, and Facebook</p>
+            <!-- App Showcase -->
+            <div class="app-showcase">
+                <div class="app-img">
+                    <img src="images/app.jpg" alt="King of Rewards App Screenshot" width="250" height="500">
+                    <div style="margin-top: 1rem; background: rgba(255,215,0,0.2); border-radius: 10px; padding: 0.5rem; text-align: center;">
+                        <h4 style="color: #ffd700;">Coming Soon</h4>
+                        <p style="font-size: 0.9rem;">Version 2.0 with even more earning options!</p>
                     </div>
                 </div>
                 
-                <div class="feature">
-                    <div class="feature-icon">🎮</div>
-                    <div class="feature-text">
-                        <h3>Gaming Rewards</h3>
-                        <p>Play FreeFire and other games, participate in color betting to earn points</p>
-                    </div>
-                </div>
-                
-                <div class="feature">
-                    <div class="feature-icon">🎵</div>
-                    <div class="feature-text">
-                        <h3>Entertainment Rewards</h3>
-                        <p>Listen to Spotify, watch movies, and complete mini-tasks for points</p>
-                    </div>
-                </div>
-                
-                <div class="feature">
-                    <div class="feature-icon">🧠</div>
-                    <div class="feature-text">
-                        <h3>Quiz & Tasks</h3>
-                        <p>Participate in quizzes and complete daily mini-tasks for extra rewards</p>
-                    </div>
-                </div>
-                
-                <div class="feature">
-                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
-                    <div class="feature-text">
-                        <h3>Referral Program</h3>
-                        <p>Invite friends and earn bonus points when they join and earn</p>
-                    </div>
-                </div>
-                
-                <div class="feature">
-                    <div class="feature-icon">🌟</div>
-                    <div class="feature-text">
-                        <h3>Daily Bonuses</h3>
-                        <p>Daily login rewards, suggestion box participation, and special bonus events</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Download Section -->
-    <section class="download-section" id="download">
-        <div class="download-container">
-            <h2>Get Started Now</h2>
-            <p>Scan the QR code below or click the download button to install King of Rewards</p>
-            
-            <div class="qr-code">
-                <img src="images/qr.png" alt="Download QR Code">
-            </div>
-            
-            <button class="cta-button">Download App</button>
-            
-            <div class="redemption-options" style="margin-top: 3rem;">
-                <h2 style="color: #ffd700; margin-bottom: 2rem;">Multiple Redemption Options</h2>
-                
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
-                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; width: 280px;">
-                        <h3 style="color: #ffd700; margin-bottom: 1rem;">💵 International</h3>
-                        <ul style="list-style: none; text-align: left;">
-                            <li style="margin-bottom: 0.5rem;">• PayPal</li>
-                            <li style="margin-bottom: 0.5rem;">• Payoneer</li>
-                            <li style="margin-bottom: 0.5rem;">• Mastercard</li>
-                            <li style="margin-bottom: 0.5rem;">• USD Direct Transfer</li>
-                        </ul>
-                    </div>
-                    
-                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; width: 280px;">
-                        <h3 style="color: #ffd700; margin-bottom: 1rem;">🇳🇵 Nepal Options</h3>
-                        <ul style="list-style: none; text-align: left;">
-                            <li style="margin-bottom: 0.5rem;">• eSewa</li>
-                            <li style="margin-bottom: 0.5rem;">• Khalti</li>
-                            <li style="margin-bottom: 0.5rem;">• Bank Transfer</li>
-                            <li style="margin-bottom: 0.5rem;">• NPR Direct Transfer</li>
-                        </ul>
-                    </div>
-                    
-                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; width: 280px;">
-                        <h3 style="color: #ffd700; margin-bottom: 1rem;">🎮 Gaming & Telecom</h3>
-                        <ul style="list-style: none; text-align: left;">
-                            <li style="margin-bottom: 0.5rem;">• FreeFire Diamonds</li>
-                            <li style="margin-bottom: 0.5rem;">• Ncell Packages</li>
-                            <li style="margin-bottom: 0.5rem;">• NTC Packages</li>
-                            <li style="margin-bottom: 0.5rem;">• Game Credits</li>
-                        </ul>
+                <div style="flex: 1; min-width: 300px; max-width: 500px;" id="features">
+                    <h2 style="color: #ffd700; margin-bottom: 2rem; text-align: center;">Multiple Ways to Earn</h2>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <div class="feature-icon">📱</div>
+                            <div class="feature-text">
+                                <h3>Social Media Rewards</h3>
+                                <p>Earn by watching videos on TikTok, YouTube, Instagram, and Facebook</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">🎮</div>
+                            <div class="feature-text">
+                                <h3>Gaming Rewards</h3>
+                                <p>Play FreeFire and other games, participate in color betting to earn points</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">🎵</div>
+                            <div class="feature-text">
+                                <h3>Entertainment Rewards</h3>
+                                <p>Listen to Spotify, watch movies, and complete mini-tasks for points</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">🧠</div>
+                            <div class="feature-text">
+                                <h3>Quiz & Tasks</h3>
+                                <p>Participate in quizzes and complete daily mini-tasks for extra rewards</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                            <div class="feature-text">
+                                <h3>Referral Program</h3>
+                                <p>Invite friends and earn bonus points when they join and earn</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">🌟</div>
+                            <div class="feature-text">
+                                <h3>Daily Bonuses</h3>
+                                <p>Daily login rewards, suggestion box participation, and special bonus events</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
+    <!-- How It Works Section -->
+    <section class="section how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Download & Register</h3>
+                    <p>Download the King of Rewards app and create your free account</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Complete Tasks</h3>
+                    <p>Watch videos, play games, take quizzes, and complete daily challenges</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Earn Points</h3>
+                    <p>Accumulate points for every activity you complete successfully</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Redeem Rewards</h3>
+                    <p>Convert your points to cash, gift cards, or in-game currencies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Redemption Options Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Multiple Redemption Options</h2>
+            <div class="redemption-grid">
+                <div class="redemption-card">
+                    <h3>💵 International</h3>
+                    <ul>
+                        <li>• PayPal</li>
+                        <li>• Payoneer</li>
+                        <li>• Mastercard</li>
+                        <li>• USD Direct Transfer</li>
+                    </ul>
+                </div>
+                
+                <div class="redemption-card">
+                    <h3>🇳🇵 Nepal Options</h3>
+                    <ul>
+                        <li>• eSewa</li>
+                        <li>• Khalti</li>
+                        <li>• Bank Transfer</li>
+                        <li>• NPR Direct Transfer</li>
+                    </ul>
+                </div>
+                
+                <div class="redemption-card">
+                    <h3>🎮 Gaming & Telecom</h3>
+                    <ul>
+                        <li>• FreeFire Diamonds</li>
+                        <li>• Ncell Packages</li>
+                        <li>• NTC Packages</li>
+                        <li>• Game Credits</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Users Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <img src="images/priya.jpg" alt="User Review" width="60" height="60">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Amazing app! I've earned over NPR 5000 just by watching TikTok videos. Highly recommended!"</p>
+                    <h4>- Priya K., Kathmandu</h4>
+                </div>
+                <div class="testimonial">
+                    <img src="images/rajesh.jpg" alt="User Review" width="60" height="60">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Fast payouts through eSewa. The gaming rewards are excellent, especially for FreeFire players."</p>
+                    <h4>- Rajesh B., Pokhara</h4>
+                </div>
+                <div class="testimonial">
+                    <img src="images/sunita.jpg" alt="User Review" width="60" height="60">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"24/7 customer support is fantastic. They resolved my issue within minutes!"</p>
+                    <h4>- Sunita M., Lalitpur</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Trust & Branding Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Trusted by Thousands</h2>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <h3>10K+</h3>
+                    <p>Active Users</p>
+                </div>
+                <div class="trust-badge">
+                    <h3>₹50k+</h3>
+                    <p>Rewards Paid</p>
+                </div>
+                <div class="trust-badge">
+                    <h3>4.8★</h3>
+                    <p>App Rating</p>
+                </div>
+                <div class="trust-badge">
+                    <h3>24/7</h3>
+                    <p>Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- News Section -->
+    <section class="section" id="news">
+        <div class="container">
+            <h2 class="section-title">Latest News & Updates</h2>
+            <div class="news-grid">
+                <div class="news-item">
+                    <img src="images/pugb.jpg" alt="News" width="300" height="200">
+                    <div class="news-content">
+                        <div class="news-date">May 20, 2025</div>
+                        <h3>New Gaming Rewards Added</h3>
+                        <p>We've added more gaming options including PUBG Mobile and Call of Duty rewards...</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="images/spotify (1).png" alt="News" width="300" height="200">
+                    <div class="news-content">
+                        <div class="news-date">May 15, 2025</div>
+                        <h3>Spotify Integration Live</h3>
+                        <p>Now earn rewards for listening to your favorite music on Spotify...</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="images/king.jpg" alt="News" width="300" height="200">
+                    <div class="news-content">
+                        <div class="news-date">May 10, 2025</div>
+                        <h3>Increased Payout Rates</h3>
+                        <p>We've increased our payout rates by 20% for all video watching activities...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How do I start earning rewards?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Simply download the app, create an account, and start completing tasks like watching videos, playing games, or taking quizzes.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What is the minimum withdrawal amount?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    The minimum withdrawal amount varies by payment method: NPR 300 for eSewa/Khalti, $3 for PayPal, and 100 diamonds for FreeFire.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How long does it take to receive payments?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Payments are processed within 24-48 hours for most methods. eSewa and Khalti transfers are usually instant.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Is the app available for both Android and iOS?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Currently, we support Android devices. iOS version is coming soon in 2025.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How can I increase my earning potential?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Complete daily tasks, refer friends, participate in bonus events, and maintain consistent activity to maximize your earnings.
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Download Section -->
+<section class="section download-section" id="download">
+    <div class="container">
+        <h2 class="section-title">Download King of Rewards</h2>
+        <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">
+            Start earning rewards today! Available on multiple platforms.
+        </p>
+        <div class="download-buttons">
+            <a href="https://play.google.com/store/apps/details?id=com.king.myvideoearnapp&pcampaignid=web_share" class="download-btn">
+                <span>📱</span>
+                Download for Android
+            </a>
+            <a href="#" class="download-btn">
+                <span>🍎</span>
+                Coming Soon - iOS
+            </a>
+            <a href="#" class="download-btn">
+                <span>🌐</span>
+                Web Version
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-section">
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email Support</h4>
+                            <p>support@kingofrewards.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div>
+                            <h4>Live Chat</h4>
+                            <p>Available 24/7 in app</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+977-9804635842</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🏢</div>
+                        <div>
+                            <h4>Office</h4>
+                            <p>Dhangadi, Nepal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Support Badge -->
+    <div class="customer-support-badge" onclick="openSupport()">
+        💬 Live Support
+    </div>
+
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="additional-features" style="margin-bottom: 2rem;">
-                <h3 style="color: #ffd700; margin-bottom: 1rem;">More Features</h3>
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 800px; margin: 0 auto;">
-                    <div style="background: rgba(255,255,255,0.1); padding: 0.7rem 1.2rem; border-radius: 20px;">Deposit</div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 0.7rem 1.2rem; border-radius: 20px;">Transfer</div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 0.7rem 1.2rem; border-radius: 20px;">Enhance Images</div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 0.7rem 1.2rem; border-radius: 20px;">Webview Ads</div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 0.7rem 1.2rem; border-radius: 20px;">Multi-Email Support</div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 0.7rem 1.2rem; border-radius: 20px; color: #ffd700;">More Coming Soon!</div>
-                </div>
-            </div>
-            
-            <div id="contact" style="margin-bottom: 2rem; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                <h3 style="color: #ffd700; margin-bottom: 1rem;">Contact Us</h3>
-                <div style="display: flex; flex-direction: column; gap: 1rem; text-align: left;">
-                    <div style="display: flex; align-items: center;">
-                        <div style="width: 40px; height: 40px; background: #ffd700; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px; color: #4a148c; font-weight: bold;">📧</div>
-                        <div>
-                            <p style="margin: 0; font-weight: bold;">Email:</p>
-                            <p style="margin: 0;">kingoferwards2004@gmail.com</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: center;">
-                        <div style="width: 40px; height: 40px; background: #ffd700; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px; color: #4a148c; font-weight: bold;">📱</div>
-                        <div>
-                            <p style="margin: 0; font-weight: bold;">WhatsApp:</p>
-                            <p style="margin: 0;">+977 9804635842</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: center;">
-                        <div style="width: 40px; height: 40px; background: #ffd700; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px; color: #4a148c; font-weight: bold;">🕒</div>
-                        <div>
-                            <p style="margin: 0; font-weight: bold;">Customer Support:</p>
-                            <p style="margin: 0;">24/7 Available</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://pythondevelopersites.blogspot.com/2025/03/kind-of-rewards-1.html" target="_blank">Terms of Service</a>
+                <a href="https://pythondevelopersites.blogspot.com/2025/02/king-of-rewards.html" target="_blank">Privacy Policy</a>
+                <a href="#support">Support</a>
+                <a href="#about">About Us</a>
+                <a href="#careers">Careers</a>
+                <a href="#press">Press</a>
             </div>
             
             <div class="social-links">
-                <a href="#" class="social-icon">f</a>
-                <a href="#" class="social-icon">t</a>
-                <a href="#" class="social-icon">in</a>
-                <a href="#" class="social-icon">ig</a>
+                <a href="#" class="social-icon" title="Facebook">📘</a>
+                <a href="#" class="social-icon" title="Instagram">📷</a>
+                <a href="#" class="social-icon" title="Twitter">🐦</a>
+                <a href="#" class="social-icon" title="YouTube">📺</a>
+                <a href="#" class="social-icon" title="TikTok">🎵</a>
+                <a href="#" class="social-icon" title="Telegram">✈️</a>
             </div>
             
-            <p>&copy; 2025 King of Rewards. All rights reserved.</p>
-            <p class="creator-info">Created by Resham Chaudhary</p>
+            <div class="creator-info">
+                <p>&copy; 2025 King of Rewards. All rights reserved.</p>
+                <p>Created with ❤️ by Resham Chaudhary</p>
+                <p>Made in Nepal 🇳🇵</p>
+            </div>
         </div>
     </footer>
-    
-    <!-- Customer Support Badge -->
-    <div class="customer-support-badge" id="supportBadge">
-        🎧 24/7 Support
-    </div>
-    
-    <!-- JavaScript -->
+
     <script>
-        // Simple animations for elements
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
+        // FAQ Toggle Function
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('span').textContent = '+';
             });
             
-            // Button animation
-            const buttons = document.querySelectorAll('.cta-button');
-            buttons.forEach(button => {
-                button.addEventListener('click', function() {
-                    alert('Thank you for your interest in King of Rewards! The app download link will be available soon.');
-                });
-            });
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+                element.querySelector('span').textContent = '−';
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const authButtons = document.querySelector('.auth-buttons');
             
-            // Simple feature highlight
-            const features = document.querySelectorAll('.feature');
-            features.forEach((feature, index) => {
-                setTimeout(() => {
-                    feature.style.opacity = 0;
-                    feature.style.transition = 'opacity 0.5s ease';
-                    setTimeout(() => {
-                        feature.style.opacity = 1;
-                    }, 200);
-                }, index * 300);
-            });
-            
-            // Customer support badge
-            const supportBadge = document.getElementById('supportBadge');
-            if (supportBadge) {
-                supportBadge.addEventListener('click', function() {
-                    window.location.href = '#contact';
-                });
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+                authButtons.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+                navLinks.style.padding = '1rem';
+                navLinks.style.zIndex = '1000';
                 
-                // Animate support badge
-                setInterval(() => {
-                    supportBadge.style.transform = 'scale(1.1)';
-                    setTimeout(() => {
-                        supportBadge.style.transform = 'scale(1)';
-                    }, 500);
-                }, 5000);
+                authButtons.style.display = 'flex';
+                authButtons.style.flexDirection = 'column';
+                authButtons.style.position = 'absolute';
+                authButtons.style.top = '200%';
+                authButtons.style.left = '0';
+                authButtons.style.width = '100%';
+                authButtons.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+                authButtons.style.padding = '1rem';
+                authButtons.style.zIndex = '1000';
+            }
+        }
+
+        // Smooth Scrolling
+         function scrollToDownload() {
+        const downloadSection = document.getElementById('download');
+        downloadSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+
+        // Wait for the scroll to complete before redirecting
+        setTimeout(() => {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.king.myvideoearnapp&pcampaignid=web_share";
+        }, 1000); // 1 second delay for smooth effect
+    }
+
+        // Support Chat Function
+       function openSupport() {
+        window.location.href = "https://wa.me/+9779804635842";
+    }
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation for images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                });
+                img.style.opacity = '0';
+                img.style.transition = 'opacity 0.3s';
+            });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.feature, .step, .testimonial, .news-item, .trust-badge');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const nav = document.querySelector('nav');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (!nav.contains(e.target) && window.innerWidth <= 768) {
+                document.querySelector('.nav-links').style.display = 'none';
+                document.querySelector('.auth-buttons').style.display = 'none';
             }
         });
+
+        // Add counter animation for trust badges
+        function animateCounters() {
+            const counters = document.querySelectorAll('.trust-badge h3');
+            counters.forEach(counter => {
+                const target = counter.innerText;
+                const numPart = target.match(/\d+/);
+                if (numPart) {
+                    const num = parseInt(numPart[0]);
+                    const suffix = target.replace(numPart[0], '');
+                    let current = 0;
+                    const increment = num / 100;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= num) {
+                            counter.innerText = num + suffix;
+                            clearInterval(timer);
+                        } else {
+                            counter.innerText = Math.floor(current) + suffix;
+                        }
+                    }, 20);
+                }
+            });
+        }
+
+        // Trigger counter animation when trust section is visible
+        const trustSection = document.querySelector('.trust-badges');
+        if (trustSection) {
+            const trustObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        trustObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            trustObserver.observe(trustSection);
+        }
     </script>
 </body>
 </html>
